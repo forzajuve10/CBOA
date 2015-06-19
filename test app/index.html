@@ -4,11 +4,13 @@
     <head>
         <title></title>
         <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
-        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-        <link href="styles/main.css" rel="stylesheet" />
+        <script src="scripts/app.js"></script>
+        <script src="scripts/login.js"></script>
     </head>
 
     <body id="friendsApp">
@@ -16,41 +18,23 @@
             <!--View content will render here-->
         </div>
         <!--WELCOME VIEW -->
-        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view">
+        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
             <div data-role="header"></div>
-            <h2 class="app-name">
-                Friends <small>Sample Application</small>
-            </h2>
+            <h2 class="app-name">Friends <small>Sample Application</small></h2>
             <form id="login-form">
                 <ul data-role="listview" data-style="inset">
-                    <li class="username">
-                        <input type="text" id="loginUsername" placeholder="username" required validationMessage="Username is required!">
-                    </li>
-                    <li class="password">
-                        <input type="password" id="loginPassword" placeholder="password" required validationMessage="Password is required!">
-                    </li>
+                    <li class="username"><input type="text" id="loginUsername" placeholder="username" required validationMessage="Username is required!"></li>
+                    <li class="password"><input type="password" id="loginPassword" placeholder="password" required validationMessage="Password is required!"></li>
                 </ul>
             </form>
             <ol class="group-wrp">
                 <li>
-                    <span id="login" data-role="touch">
+                    <span id="login" data-role="touch" data-bind="events: { tap: login }">
                         <a data-role="button" class="btn btn-login">Login</a>
                     </span>
                 </li>
             </ol>
         </div>
-
-        <script>
-            var os = kendo.support.mobileOS,
-                statusBarStyle = os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black';
-
-            // Initialize KendoUI mobile application
-            var mobileApp = new kendo.mobile.Application(document.body, {
-                                                             transition: 'slide',
-                                                             statusBarStyle: statusBarStyle,
-                                                             skin: 'flat'
-                                                         });
-        </script>
     </body>
 
 </html>
