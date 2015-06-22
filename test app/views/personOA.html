@@ -1,3 +1,26 @@
-<p id="geolocation">Finding geolocation...</p>
-<br/>
-<p id="deviceProperties">Loading device properties...</p>
+<div data-role="view" id="badges-profile" data-title="个人" data-layout="mobile-tabstrip">
+    <h1>打卡</h1>
+</div>
+
+<div data-role="view" id="badges-sales" data-title="办公" data-layout="mobile-tabstrip">
+    <h1>排班</h1>
+</div>
+
+<div data-role="layout" data-id="mobile-tabstrip">
+    <header data-role="header">
+        <div data-role="navbar">
+            <!--<a class="nav-button" data-align="left" data-role="backbutton">Back</a>-->
+            <span data-role="view-title"></span>
+            <a data-align="right" data-role="button" class="nav-button" href="#/">登出</a>
+        </div>
+    </header>
+
+    <p>TabStrip</p>
+
+    <div data-role="footer">
+        <div data-role="tabstrip" id="badges-tabs">
+            <a href="#badges-profile" data-icon="home">Home
+            </a><a href="#badges-sales" data-icon="edit" data-badge="10">Mail</a>
+        </div>
+    </div>
+</div>

@@ -282,6 +282,11 @@ input[type='week'] {
   list-style-type: none;
 }
 
+
+#friendsApp .appName{
+    text-align:center
+}
+
 #friendsApp .welcome-scrn .group-wrp li {
   margin: 1.5em 0 0;
 }

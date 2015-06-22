@@ -20,17 +20,17 @@
         <!--WELCOME VIEW -->
         <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
             <div data-role="header"></div>
-            <h2 class="app-name">Friends <small>Sample Application</small></h2>
+            <h2 class="appName">重保办公</h2>
             <form id="login-form">
                 <ul data-role="listview" data-style="inset">
-                    <li class="username"><input type="text" id="loginUsername" placeholder="username" required validationMessage="Username is required!"></li>
-                    <li class="password"><input type="password" id="loginPassword" placeholder="password" required validationMessage="Password is required!"></li>
+                    <li class="username"><input type="text" id="loginUsername" placeholder="用户名" required validationMessage="Username is required!"></li>
+                    <li class="password"><input type="password" id="loginPassword" placeholder="密码" required validationMessage="Password is required!"></li>
                 </ul>
             </form>
             <ol class="group-wrp">
                 <li>
                     <span id="login" data-role="touch" data-bind="events: { tap: login }">
-                        <a data-role="button" class="btn btn-login">Login</a>
+                        <a data-role="button" class="btn btn-login">登陆</a>
                     </span>
                 </li>
             </ol>
