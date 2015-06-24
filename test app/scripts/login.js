@@ -17,11 +17,6 @@ app.Login = (function () {
             $loginPassword = $('#loginPassword');
         };
 
-        var show = function () {
-            $loginUsername.val('');
-            $loginPassword.val('');
-        };
-
         // Authenticate to use Backend Services as a particular user
         var login = function () {
 
@@ -40,13 +35,19 @@ app.Login = (function () {
             }    
                       
         };
+        
+        var logout = function(){
+            $loginUsername.val("");
+            $loginPassword.val("");
+            app.mobileApp.navigate('index.html');
+        };
 
         
 
         return {
             init: init,
-            show: show,
-            login: login
+            login: login,
+            logout:logout
         };
 
     }());

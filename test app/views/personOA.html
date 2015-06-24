@@ -1,9 +1,33 @@
 <div data-role="view" id="badges-profile" data-title="个人" data-layout="mobile-tabstrip">
-    <h1>打卡</h1>
+    <div id="person">
+        <ul>
+            <li>
+                <div class="box-col" style="width: 300px;">
+                    <button data-role="button"
+                            data-sprite-css-class="k-icon k-edit"
+                            data-click="app.Oa.checkInClick"
+                            style="width: 180px"
+                            >打卡</button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div data-role="view" id="badges-sales" data-title="办公" data-layout="mobile-tabstrip">
-    <h1>排班</h1>
+    <div id="work">
+        <ul>
+            <li>
+                <div class="box-col" style="width: 300px;">
+                    <button data-role="button"
+                            data-sprite-css-class="k-icon k-edit"
+                            data-click="app.Oa.arrangeOrderClick"
+                            style="width: 180px"
+                            >排班</button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div data-role="layout" data-id="mobile-tabstrip">
@@ -11,7 +35,7 @@
         <div data-role="navbar">
             <!--<a class="nav-button" data-align="left" data-role="backbutton">Back</a>-->
             <span data-role="view-title"></span>
-            <a data-align="right" data-role="button" class="nav-button" href="#/">登出</a>
+            <a data-align="right" class="nav-button" data-role="button" data-click="app.Login.logout">登出</a>
         </div>
     </header>
 
@@ -19,8 +43,8 @@
 
     <div data-role="footer">
         <div data-role="tabstrip" id="badges-tabs">
-            <a href="#badges-profile" data-icon="home">Home
-            </a><a href="#badges-sales" data-icon="edit" data-badge="10">Mail</a>
+            <a href="#badges-profile" data-icon="home">Home </a>
+            <a href="#badges-sales" data-icon="edit" data-badge="10">Mail</a>
         </div>
     </div>
 </div>
